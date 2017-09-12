@@ -1,0 +1,391 @@
+// ---------- FONTS ---------- //
+@font-face {
+	font-family: "Roboto-Bold";
+	src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Italic";
+	src: url("../fonts/roboto/Roboto-Italic.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url("../fonts/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Medium";
+	src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+// ---------- FONTS END ---------- //
+
+// ---------- EXTENDS ---------- //
+%Roboto-Bold{
+	font-family: "Roboto-Bold"
+}
+
+%Roboto-Italic{
+	font-family: "Roboto-Italic"
+}
+
+%Roboto-Light{
+	font-family: "Roboto-Light"
+}
+
+%Roboto-Medium{
+	font-family: "Roboto-Medium"
+}
+
+%Roboto-Regular{
+	font-family: "Roboto-Regular"
+}
+
+%border-blocks{
+    background-color: #fafafb;
+    border: 2px solid #d2dae1;
+    border-radius: 2px;
+}
+// ---------- EXTENDS END ---------- //
+
+// ---------- VARIABLES ---------- //
+$link-clr: #4c5867;
+$link-hover-clr: #d4dde3;
+$btn-clr: #fff;
+$btn-bg-green: #42b91c;
+$btn-bg-blue: #268fbd;
+
+$nav-bg: #f1f5f8;
+
+$border-radius: 4px;
+// ---------- VARIABLES END ---------- //
+
+// ---------- COMMON STYLES ---------- //
+*{
+	list-style: none;
+}
+
+html{
+	font-size: 10px;
+}
+
+body{
+    color: #586370;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6{
+	margin: 0;
+    
+}
+
+ul, li{
+	padding: 0;
+}
+
+a{
+    color: $link-clr;
+}
+
+button, input{
+	border-radius: $border-radius;
+}
+
+.btn{
+	border: none;
+	border-bottom: 2px solid rgba(100, 100, 100, .25);
+    color: $btn-clr;
+    padding: 6px 7px;
+}
+
+.btn_green{
+     background-color: $btn-bg-green;
+}
+
+.btn_blue{
+    background-color: $btn-bg-blue;
+}
+
+.hamburger, .personal{
+    display: none;
+}
+// ---------- COMMON STYLES END ---------- //
+
+.container{
+	max-width: 1200px;
+}
+
+.header{
+    &__nav{
+        margin-bottom: .8rem;
+        border: 1px solid #d2dae1;
+        background: $nav-bg;
+    }
+	&__items{
+		@extend %Roboto-Regular;
+        font-size: 0;
+		text-align: center;
+	}
+	&__item{
+        float: left;
+		padding: 0;
+		font-size: 1.7rem;
+	}
+    &__imgs{
+        text-align: right;
+        line-height: 2.2;
+    }
+	&__link{
+		padding: 1rem 1rem;
+		display: block;
+		&:hover:not(.header__link_imgs){
+			background: $link-hover-clr;
+		}
+	}
+	&__linkImg{
+        display: inline-block;
+		margin-right: 1%;
+        padding: .5rem 0;
+	}
+	&__linkImg:nth-child(3){
+		margin-right: 3.2%;
+	}
+}
+
+.inf{
+    padding-bottom: .8rem;
+}
+
+.little{
+	border: 1px solid #feefaa;
+	padding: .3rem 0;
+	line-height: 1;
+	background-color: #fff5c8;
+    text-align: center;
+	@extend %Roboto-Bold;
+    &__num{
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: .6rem 0;
+    }
+
+    &__num_vb{
+        background: url(../img/vb.png) no-repeat;
+        padding-left: 27px;
+    }
+
+    &__num_ar{
+        background: url(../img/ar.png) no-repeat;
+        padding-left: 27px;
+    }
+
+    &__num_wup{
+        background: url(../img/wup.png) no-repeat;
+        padding-left: 27px;
+    }
+
+    &__num_icq{
+        background: url(../img/icq.png) no-repeat;
+        padding-left: 27px;
+    }
+}
+
+// ---------- VISIBLE-XS ---------- //
+.little{
+    padding-right: 10px;
+    padding-bottom: 0;
+    &__portfolio, &__discounts{
+        padding-left: 53px;
+    }
+    &__portfolio{
+        padding-bottom: 14px;
+        background: url(../img/portfolio.png) no-repeat;
+        background-position: 4% 0;
+    }
+    &__discounts{
+        padding-bottom: 12px;
+        background: url(../img/circle.png) no-repeat;
+        background-position: 4% 0;
+    }
+    &__caption{
+        @extend %Roboto-Bold;
+        margin-bottom: .5rem;
+        font-size: 1.7rem;
+    }
+    &__link{
+        @extend %Roboto-Regular;
+        font-size: 1.4rem;
+        color: $btn-bg-blue;
+    }
+}
+// ---------- VISIBLE-XS END ---------- //
+
+.profile{
+    margin-top: 1.8rem;
+    text-align: center;
+    &__forgot{
+        margin-top: 1.5rem;
+    }
+}
+
+.mailTime{
+    margin-bottom: 1.1rem;
+}
+
+.mailTime__mail, .mailTime__time{
+	@extend %Roboto-Light;
+	font-size: 1.4rem;
+	line-height: 1;
+	margin-bottom: 0;
+	height: auto;
+}
+
+.mailTime__mail{
+    padding-left: 38px;
+    background: url(../img/convert.png) no-repeat 15px;
+}
+
+.mailTime__time{
+    padding: 3px 0 3px 26px;
+    background: url(../img/watch.png) no-repeat;
+    background-position: 2% 0;
+}
+
+.tel{
+	@extend %Roboto-Light;
+	line-height: 6.5rem;
+	font-size: 3rem;
+}
+
+
+.main{
+    padding: 3.5rem 0 3.5rem;
+	background: url(../img/main-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.currency{
+    &__text{
+        margin-bottom: 1.5rem;
+    }
+    &__service{
+        padding: 2.2rem;
+        @extend %border-blocks;
+    }
+    &__caption{
+        font-size: 3.4rem;
+        @extend %Roboto-Bold;
+    }
+    &__item{
+        font-size: 1.4rem;
+        @extend %Roboto-Light;
+    }
+    &__active{
+        padding: 0;
+        font-size: 1.8rem;
+        @extend %Roboto-Medium;	
+    }
+    &__inp{
+        border: 2px solid #b1b7c9;
+        font-size: 1.6rem;
+        padding: .6rem;
+    }
+    &__limit, &__link{
+        line-height: 1;
+        font-size: 1.6rem;
+        @extend %Roboto-Regular;
+    }
+    &__num{
+        line-height: 1;
+        font-size: 1.8rem;
+        @extend %Roboto-Bold;
+    }
+    &__link{
+        color: #5dbd66;
+        &:before{
+            content: '';
+            display: inline-block;
+            border: 5px solid transparent;
+            border-left: 5px solid #5dbd66;
+            margin-left: 6px;
+        }
+    }
+    &__change{
+        margin-top: 1.5rem;
+        background: url(../img/change.png) no-repeat $btn-bg-green 38% center;
+    }
+}
+
+.bunners{
+    &__block{
+        @extend %border-blocks;
+        padding: 8px 8px 8px 75px;
+        background-position: 4%;
+        background-repeat: no-repeat;
+    }
+    &__block_common{
+        padding: 8px;
+    }
+    &__block_above{
+        background-image: url(../img/phone.png);
+        margin-bottom: 3rem;
+    }
+    &__block_down{
+        margin-bottom: .5rem;
+        padding-left: 67px;
+        background-image: url(../img/money.png);
+        border: none;
+    }
+    &__link{
+        @extend %Roboto-Regular;
+        padding-left: 2rem;
+        background: url(../img/convert.png) no-repeat left center;
+        font-size: 1.4rem;
+        color: $btn-bg-blue;
+    }
+    &__caption{
+        @extend %Roboto-Light;
+        font-size: 1.8rem;
+    }
+    &__btn{
+        display: block;
+        margin: 0 auto 1.2rem;
+        width: 90%;
+        &:before{
+            content: '';
+            display: inline-block;
+            margin-left: 6px;
+            border: 5px solid transparent;
+            border-left: 5px solid $btn-clr;
+            padding-right: .4rem;
+        }
+    }
+    &__underline{
+        @extend %Roboto-Regular;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+        font-size: 2.4rem;
+    }
+    &__italic{
+        @extend %Roboto-Italic;
+        margin-bottom: 1rem;
+        color: $btn-bg-blue;
+    }
+    &__icon{
+        @extend %Roboto-Medium;
+        font-size: 1.7rem;
+        padding-left: 3rem;
+    }
+    &__icon_pes{
+        background: url(../img/pes.png) no-repeat left center;
+    }
+    &__icon_bank{
+        background: url(../img/bank.png) no-repeat left center;
+    }
+}
+
+@import "media.scss";

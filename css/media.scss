@@ -1,0 +1,218 @@
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .tel{
+        font-size: 2.3rem;
+    }
+}
+
+// ---------- max-width: 376px ---------- //
+@media (max-width: 600px) {
+    .currency{
+        &__change{
+            background-position: 33%;
+        }
+    }
+}
+// ---------- max-width: 376px end ---------- //
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+    html{
+        font-size: 9.5px;
+    }
+    
+    .mailTime{
+        &__time{
+            line-height: 3.4rem;
+            background-position: 2% 40%;
+        }
+    }
+    
+    .profile{
+        margin-top: 0;
+        & button{
+            width: 50%;
+        }
+        & button + button{
+            margin-top: 1rem;
+        }
+    }
+    
+    .currency{
+        &__change{
+            background-position: 40%;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+    .header{
+        &__item{
+            float: none;
+            display: inline-block;
+        }
+        &__imgs{
+        text-align: center;
+        line-height: 2.2;
+        }
+    }
+    .tel{
+        font-size: 3.2rem;
+    }
+    .currency{
+        &__change{
+            background-position: 33%;
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+    .container{
+        width: 100%;
+    }
+    
+    .header{
+        &__link_imgs{
+            margin-right: .1rem;
+            padding-left: 0;
+            padding-right: 0;
+            display: inline-block;
+            vertical-align: center;
+        }        
+    }
+    
+    .tel{
+        line-height: 5.5rem;
+    }
+    
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+@media (min-width: 768px) and (max-width: 1199px){    
+    .header{
+        &__words{
+            width: 70%;
+            padding: 0;
+        }
+        &__item_imgs{
+            width: 30%;
+            line-height: 3.8rem;
+        }
+        &__link{
+            padding: .8rem .8rem;
+        }
+        &__link_imgs{
+            padding: .1rem .1rem;
+            line-height: 3.7rem;
+        }
+    }
+    
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .tel{
+        font-size: 1.7rem;
+    }
+    
+    .profile{
+        font-size: 1.1rem;
+    }
+}
+
+// ---------- max-width: 376px ---------- //
+@media (max-width: 375px) {
+    .header__items{
+        display: none;
+    }
+    
+    .header__word{
+        margin: 0;
+    }
+    
+    .header__imgs{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .mailTime__time, .header__linkImg_hidden{
+        display: none !important;
+    }
+    
+    .hamburger, .personal{
+        display: inline-block;
+    }
+    
+    .personal{
+        line-height: 2.9em;
+    }
+    
+    .header__linkImg{
+        float: right;
+    }
+    
+    .hamburger{
+        float: left;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .little_hidden, .profile{
+        display: none !important;
+    }
+    
+    .soc{
+        display: block !important;
+        text-align: center;
+    }
+    
+    .tel{
+        text-align: center;
+        font-size: 3.8rem;
+    }
+    
+    .logo{
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .logo__img{
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .tel{
+        display: block !important;
+    }
+    
+    .main{
+        background: #ebf1f4;
+    }
+    
+    .currency__caption{
+        display: none;
+    }
+    
+    .currency__caption_mini{
+        display: block !important;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 2.6rem;
+    }
+    
+    .currency__inp{
+        width: 100%;
+    }
+    
+    .currensy__about{
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+// ---------- max-width: 376px END ---------- //
+
+}
